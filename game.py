@@ -12,7 +12,7 @@ class Game(object):
     def get_ip_info(self):
         response = requests.get(ipinfo_url)
         response_json = response.json()
-        return response.json()
+        return response_json
     
     def cache_cases(self, method_name):
         raise NotImplementedError
@@ -20,7 +20,7 @@ class Game(object):
     def reverse_string(self, string):
         string_cpy = [letter for letter in string] 
         i = 0
-        j = len(string) - 1 
+        j = len(string) - 1 lo
         while (i < j):
             temp = string_cpy[j]
             string_cpy[j] = string_cpy[i]
